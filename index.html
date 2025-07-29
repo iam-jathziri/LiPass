@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="csslipass.css">
+  <title>LiPass</title>
+</head>
+<body>
+
+  <!-- Pantalla 1: Logo -->
+  <div id="pantalla1" class="pantalla activa">
+    <img src="Imagenes/logo_principal.jpg" alt="Logo LiPass" onclick="mostrarPantalla('pantalla2')" />
+  </div>
+
+  <!-- Pantalla 2: Qué es LiPass -->
+  <div id="pantalla2" class="pantalla">
+    <img src="Imagenes/informativa.jpg" alt="Imagen informativa" onclick="mostrarPantalla('pantalla3')" />
+  </div>
+
+  <!-- Pantalla 3: Login -->
+  <div id="pantalla3" class="pantalla">
+    <img src="Imagenes/login.jpg" alt="Login LiPass" style="width:350px; height:auto; margin-bottom: 20px;" />
+    
+    <label style="font-weight:bold; font-size:14px;">Email</label>
+    <input type="email" id="inputEmail" placeholder="name.example.com" style="width:280px; margin-bottom:15px; padding:8px; font-size:14px;" />
+
+    <label style="font-weight:bold; font-size:14px;">Autenticación</label>
+    <input type="password" id="inputPassword" placeholder="********" style="width:280px; margin-bottom:15px; padding:8px; font-size:14px;" />
+
+    <button id="btnIngresar" style="
+        width:280px;
+        background-color:#898B8A;
+        color:white;
+        font-weight:bold;
+        font-size:14px;
+        padding:10px;
+        border:none;
+        cursor:pointer;
+        margin-bottom:15px;
+      ">Iniciar sesión</button>
+
+    <label style="font-weight:bold; font-size:14px; margin-bottom:10px; display:block;">o usa una de tus redes</label>
+
+    <div style="display:flex; justify-content:center; gap:10px; margin-bottom:15px;">
+      <button id="btnFacebook" style="
+          background-color:#093FB4;
+          color:white;
+          font-weight:bold;
+          font-size:14px;
+          padding:10px 20px;
+          border:none;
+          cursor:pointer;
+        ">Facebook</button>
+      <button id="btnGoogle" style="
+          background-color:#B22222;
+          color:white;
+          font-weight:bold;
+          font-size:14px;
+          padding:10px 20px;
+          border:none;
+          cursor:pointer;
+        ">Google</button>
+    </div>
+
+    <div style="display:flex; justify-content:center; gap:10px;">
+      <label style="font-weight:bold; font-size:14px; cursor:pointer; color:#007BFF;" id="noPuedesIngresar">¿No puedes ingresar?</label>
+      <label style="font-weight:bold; font-size:14px; cursor:pointer; color:#007BFF;" id="cuentaNueva">Cuenta nueva</label>
+    </div>
+  </div>
+
+  <!-- Pantalla 4 - Paso inicial de autenticación -->
+  <div id="pantalla4" class="pantalla">
+    <img src="Imagenes/paso.jpg" style="width:342px; cursor:pointer;" onclick="mostrarPantalla('pantalla5')" />
+  </div>
+
+  <!-- Pantalla 5 - Autenticación de dedo -->
+  <div id="pantalla5" class="pantalla">
+    <div class="contenido-scroll">
+    <img src="Imagenes/dedo.jpg" style="width:320px; cursor:pointer;" onclick="mostrarPantalla('pantalla6')" />
+  </div> </div>
+
+  <!-- Pantalla 6 - Autenticación de pulso -->
+  <div id="pantalla6" class="pantalla">
+    <div class="contenido-scroll">
+    <img src="Imagenes/pulso.jpg" style="width:320px; cursor:pointer;" onclick="mostrarPantalla('pantalla7')" />
+  </div> </div>
+
+  <!-- Pantalla 7 - Autenticación de rostro -->
+  <div id="pantalla7" class="pantalla">
+    <div class="contenido-scroll">
+    <img src="Imagenes/rostro.jpg" style="width:320px; cursor:pointer;" onclick="mostrarPantalla('pantalla8')" />
+  </div> </div>
+
+  <!-- Pantalla 8 - Autenticación con passkey -->
+  <div id="pantalla8" class="pantalla">
+    <div class="contenido-scroll">
+    <img src="Imagenes/passkey.jpg" style="width:350px; cursor:pointer;" onclick="mostrarPantalla('pantalla9')" />
+  </div> <</div>
+
+  <!-- Pantalla 9 - Registro exitoso -->
+  <div id="pantalla9" class="pantalla">
+    <div class="contenido-scroll">
+    <img src="Imagenes/exitosa.jpg" style="width:340px; cursor:pointer;" onclick="mostrarPantalla('pantalla10')" />
+  </div> </div>
+
+  <!-- Pantalla 10 - Inicio -->
+  <div id="pantalla10" class="pantalla">
+    <div class="barra-superior">
+      <div class="seccion seccion-izquierda">
+        <img src="Imagenes/inicial.jpg" id="btnIzquierda" />
+      </div>
+    <div class="seccion seccion-central">
+      <img src="Imagenes/inicial2.jpg" />
+    </div>
+    <div class="seccion seccion-derecha">
+      <img src="Imagenes/inicial3.jpg" id="btnDerecha" />
+    </div>
+  </div>
+
+    <div class="contenido-scroll">
+      <img src="Imagenes/inicial4.jpg" class="contenido-principal" />
+    </div>
+  </div>
+
+  <!-- Pantalla 11 - Notificaciones -->
+  <div id="pantalla11" class="pantalla">
+    <img
+    src="Imagenes/noti1.jpg"
+    alt="Volver a inicio"
+    class="barra-notificacion"
+    onclick="mostrarPantalla('pantalla10')"
+    />
+
+  <div class="contenido-scroll-noti">
+    <img
+      src="Imagenes/noti2.jpg"
+      alt="Contenido de notificación"
+      class="contenido-noti"
+    />
+  </div>
+  </div>
+
+  <!-- Pantalla 12 - Usuario -->
+  <div id="pantalla12" class="pantalla">
+    <div class="contenido-scroll-usuario">
+      <img src="Imagenes/usuario1.jpg" class="imagen-usuario" alt="Login" />
+
+      <img src="Imagenes/usuario2.jpg" class="imagen-usuario btnInfo" alt="Información" />
+      <img src="Imagenes/usuario3.jpg" class="imagen-usuario btnNoti" alt="Notificaciones" />
+      <img src="Imagenes/usuario4.jpg" class="imagen-usuario btnCuenta" alt="Cuenta" />
+
+      <img src="Imagenes/usuario5.jpg" class="imagen-usuario" alt="Opción 1" />
+      <img src="Imagenes/usuario6.jpg" class="imagen-usuario" alt="Opción 2" />
+    </div>
+  </div>
+
+  <!-- Pantalla 13 - Perfil de usuario -->
+  <div id="pantalla13" class="pantalla">
+    <img src="Imagenes/usuarioperfil.jpg" class="imagen-superior btnVolver12" alt="Perfil" />
+    <div class="contenido-scroll">
+      <img src="Imagenes/usuarioperfil2.jpg" class="contenido-principal" alt="Contenido perfil" />
+    </div>
+  </div>
+
+  <!-- Pantalla 14 - Notificaciones -->
+  <div id="pantalla14" class="pantalla">
+    <img src="Imagenes/noti1.jpg" class="imagen-superior btnVolver12" alt="Notificaciones encabezado" />
+      <div class="contenido-scroll">
+        <img src="Imagenes/noti2.jpg" class="contenido-principal" alt="Notificaciones contenido" />
+      </div>
+  </div>
+
+  <!-- Pantalla 15 - Tus cuentas -->
+  <div id="pantalla15" class="pantalla">
+    <img src="Imagenes/cuentas1.jpg" class="imagen-superior btnVolver12" alt="Tus cuentas encabezado" />
+      <div class="contenido-scroll">
+        <img src="Imagenes/cuentas.jpg" class="contenido-principal" alt="Tus cuentas contenido" />
+      </div>
+  </div>
+
+  <script src="jslipass.js"></script>
+</body>
+</html>
