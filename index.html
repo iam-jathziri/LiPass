@@ -25,8 +25,9 @@
 
   <!-- Pantalla 2: Qué es LiPass -->
   <div id="pantalla2" class="pantalla">
-    <img src="Imagenes/informativa.jpg" alt="Imagen informativa" onclick="mostrarPantalla('pantalla3')" />
-  </div>
+    <div class="contenido-scroll">
+    <img src="Imagenes/lipass1.jpg" alt="Imagen informativa" onclick="mostrarPantalla('pantalla3')" />
+  </div> </div>
 
   <!-- Pantalla 3: Login -->
   <div id="pantalla3" class="pantalla">
@@ -90,23 +91,23 @@
     <img src="Imagenes/dedo.jpg" style="width:320px; cursor:pointer;" onclick="mostrarPantalla('pantalla6')" />
   </div> </div>
 
-  <!-- Pantalla 6 - Autenticación de pulso -->
+  <!-- Pantalla 6 - Autenticación de rostro -->
   <div id="pantalla6" class="pantalla">
     <div class="contenido-scroll">
-    <img src="Imagenes/pulso.jpg" style="width:320px; cursor:pointer;" onclick="mostrarPantalla('pantalla7')" />
+    <img src="Imagenes/rostro.jpg" style="width:320px; cursor:pointer;" onclick="mostrarPantalla('pantalla7')" />
   </div> </div>
 
-  <!-- Pantalla 7 - Autenticación de rostro -->
+  <!-- Pantalla 7 - Autenticación de pulso -->
   <div id="pantalla7" class="pantalla">
     <div class="contenido-scroll">
-    <img src="Imagenes/rostro.jpg" style="width:320px; cursor:pointer;" onclick="mostrarPantalla('pantalla8')" />
+    <img src="Imagenes/lipass2.jpg" style="width:320px; cursor:pointer;" onclick="mostrarPantalla('pantalla8')" />
   </div> </div>
 
   <!-- Pantalla 8 - Autenticación con passkey -->
   <div id="pantalla8" class="pantalla">
     <div class="contenido-scroll">
     <img src="Imagenes/passkey.jpg" style="width:350px; cursor:pointer;" onclick="mostrarPantalla('pantalla9')" />
-  </div> <</div>
+  </div> </div>
 
   <!-- Pantalla 9 - Registro exitoso -->
   <div id="pantalla9" class="pantalla">
@@ -159,8 +160,7 @@
       <img src="Imagenes/usuario2.jpg" class="imagen-usuario btnInfo" alt="Información" />
       <img src="Imagenes/usuario3.jpg" class="imagen-usuario btnNoti" alt="Notificaciones" />
       <img src="Imagenes/usuario4.jpg" class="imagen-usuario btnCuenta" alt="Cuenta" />
-
-      <img src="Imagenes/usuario5.jpg" class="imagen-usuario" alt="Opción 1" />
+      <img src="Imagenes/usuario5.jpg" class="imagen-usuario btnEstilos" alt="Estilos" />
       <img src="Imagenes/usuario6.jpg" class="imagen-usuario" alt="Opción 2" />
     </div>
   </div>
@@ -189,6 +189,15 @@
       </div>
   </div>
 
+  <!-- Pantalla 16 - Estilos -->
+  <div id="pantalla16" class="pantalla">
+    <img src="Imagenes/atrasesti.jpg" class="imagen-superior btnVolver12" alt="Tus cuentas encabezado" />
+      <div class="contenido-scroll">
+        <img src="Imagenes/lipass3.jpg" class="contenido-principal" alt="Tus cuentas contenido" />
+      </div>
+  </div>
+
   <script src="jslipass.js"></script>
 </body>
 </html>
+
