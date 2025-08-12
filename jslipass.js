@@ -5,6 +5,7 @@ function mostrarPantalla(id) {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Eventos botones redes sociales para abrir enlace en pestaña nueva
       document.getElementById('btnFacebook').addEventListener('click', () => {
       window.open('https://www.facebook.com', '_blank');
     });
@@ -25,13 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.getElementById('btnIzquierda')?.addEventListener('click', () => {
-  mostrarPantalla('pantalla11');
+  mostrarPantalla('pantalla11'); // Debes crear pantalla11 en el HTML
 });
 
 document.getElementById('btnDerecha')?.addEventListener('click', () => {
-  mostrarPantalla('pantalla12');
+  mostrarPantalla('pantalla12'); // Debes crear pantalla12 en el HTML
 });
 
+// Pantalla 12: Eventos para imágenes clicables
 document.querySelector('.btnInfo')?.addEventListener('click', () => {
   mostrarPantalla('pantalla13');
 });
@@ -42,6 +44,10 @@ document.querySelector('.btnNoti')?.addEventListener('click', () => {
 
 document.querySelector('.btnCuenta')?.addEventListener('click', () => {
   mostrarPantalla('pantalla15');
+});
+
+document.querySelector('.btnEstilos')?.addEventListener('click', () => {
+  mostrarPantalla('pantalla16');
 });
 
 document.querySelectorAll('.btnVolver12').forEach(btn => {
